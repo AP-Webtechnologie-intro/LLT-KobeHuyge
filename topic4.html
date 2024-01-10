@@ -12,9 +12,7 @@
   <script>
     const API_KEY = '5ecc7ef547411bff29a000af622caf43477e78488fb33b32c941c4404d56d8b1';
     const BASE_URL = 'https://api.esportsearnings.com/v0/LookupHighestEarningPlayers';
-    const OFFSET = 0; // Set your desired offset value
-
-    // Function to populate player names and earnings
+    const OFFSET = 0; 
     function populatePlayersList(data) {
         const playersList = document.getElementById('playersList');
         if (data && data.players) {
@@ -28,10 +26,7 @@
         }
     }
 
-    // Construct the URL with query parameters
     const apiUrl = `${BASE_URL}?apikey=${API_KEY}&offset=${OFFSET}`;
-
-    // Fetch data and populate player names and earnings when the page loads
     document.addEventListener('DOMContentLoaded', () => {
         fetch(apiUrl)
             .then(response => {
