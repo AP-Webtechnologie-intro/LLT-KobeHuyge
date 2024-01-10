@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+    <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+  <title>TEST PAGE</title>
+  <style>
+    .top-right-image {
+  float: right;
+  top: 0;
+  right: 0;
+  width: 100px; 
+  height: auto; 
+  margin-left: 20px;
+  outline-style: dashed;
+  outline-color: black;
+  outline-width: 5px;
+}
+.container {
+  position: relative;
+  padding: 20px;
+  border: 1px solid #ccc;
+  margin-top: 50px;
+  outline-color: black;
+  outline-width: 5px;
+  outline-style: inset;
+  width: 70%;
+  align-self:center
+
+    }
+
+    .content img {
+        width: 60%; 
+        height: 500px; 
+        object-fit: cover; 
+        display: block;
+        margin-bottom: 20px;
+        margin-left: 20%;
+        margin-right: 20%;
+        margin-top: 30px;
+        outline-color: aqua;
+        outline-width: 20px;
+        outline-style: groove;     
+    }
+    .right aside {
+      background-color: lightgray;
+      width: 10%;
+      float: right;
+      position: fixed;
+      right: 0;
+      top: 0px;
+      bottom: 0;
+      z-index: -1;
+      outline-style: solid;
+      outline-color: darkgray;
+      outline-width: 10px;
+    }
+    .left aside {
+      background-color: lightgray;
+      width: 10%;
+      float: left;
+      position: fixed;
+      left: 0;
+      top: 0px;
+      bottom: 0;
+      z-index: -1;
+      outline-style: solid;
+      outline-color: darkgray;
+      outline-width: 10px; }   
+    h1 {
+      text-align: center;
+      font-size: 50px;
+      margin-top: 15px;
+      color: black;
+    }
+    @media (max-width: 1000px) {
+      .left aside{
+        background-color: lightgray;
+      width: 0%;
+      float: left;
+      position: fixed;
+      left: 0;
+      top: 0px;
+      bottom: 0;
+      z-index: -1;
+      outline-style: solid;
+      outline-color: darkgray;
+      outline-width: 10px;
+      }
+      .right aside{
+        background-color: lightgray;
+      width: 0%;
+      float: right;
+      position: fixed;
+      right: 0;
+      top: 0px;
+      bottom: 0;
+      z-index: -1;
+      outline-style: solid;
+      outline-color: darkgray;
+      outline-width: 10px;
+      }
+      .content img{
+        width: 70%; 
+        height: 500px; 
+        object-fit: cover; 
+        display: block;
+        margin-bottom: 20px;
+        margin-left: 15%;
+        margin-right: 15%;
+        margin-top: 30px;
+        outline-color: aqua;
+        outline-width: 20px;
+        outline-style: groove;     
+      }
+      .content img {
+        width: 60%; 
+        height: 350px; 
+        object-fit: cover; 
+        display: block;
+        margin-bottom: 20px;
+        margin-left: 20%;
+        margin-right: 20%;
+        margin-top: 30px;
+        outline-color: aqua;
+        outline-width: 20px;
+        outline-style: groove;   }}
+      
+  </style>
+
+    </head>
+    <body>
+      <div class="right">
+        <aside>
+          <p></p>
+        </aside>
+      </div>
+      <div class="left">
+        <aside>
+          <p></p>
+        </aside>
+      </div>
+        
+         <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">
+                <img src="OPDRACHT WEBBBB/NAVLOGO.png" width="100" height="50">
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link" style="color:aqua" aria-current="page" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" style="color:aqua" href="overzicht.html">Overzicht</a>
+                  </li>
+                  
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" style="color:aqua" href="" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Topic-Pages
+                    </a>
+                    <ul class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" style="color:white" href="topic1.html">Pioniers</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" style="color:white" href="topic2.html">Professionele E-Sports</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" style="color:white" href="topic3.html">E-Sports in de 21e Eeuw</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" style="color:white" href="topic4.html">Olympische erkenning en mainstream succes E-Sports</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" style="color:white" href="topic5.html">De toekomst van E-Sports</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" style="color:white" href="topic6.html">E-Sports in Brazilië</a></li>                                         
+                    </ul>
+                    <li class="nav-item">
+                        <a class="nav-link" style="color:aqua" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" style="color:aqua" href="" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Mappen
+                      </a>
+                      <ul class="dropdown-menu bg-dark" aria-labellebdy="navbarDropdown">
+                        <li><a class="dropdown-item" style="color:white" href="Map1.html">Brazilië</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" style="color:white" href="Map2.html">Stanford University</a></li>
+                      <li><hr class="dropdown-divider"></li>
+
+                      </ul>
+
+                    </li>
+                    
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-lg" style="color:aqua" type="submit">Search</button>
+                  </form>                                
+              </div>
+            </div>
+          </nav>
+          <p></p>
+          <h1>E-Sports</h1>
+          
+          <div class="content">
+            <img src="OPDRACHT WEBBBB/63fe73d90694450859da70fe142d72e445a0a9cc-1600x900.jpg">
+          </div>
+          <div class="container">
+            <img src="OPDRACHT WEBBBB/foto.jpg" class="top-right-image" alt="selfie">
+            <p>E-sports zijn mijn ontsnapping naar een wereld vol adrenaline, strategie en gemeenschap. Het begon allemaal als een passie voor videogames - een manier om  te ontspannen na een lange dag, maar het groeide al snel uit tot zoveel meer.
+              Wat me het meest aanspreekt aan E-sports is de diepgang ervan. Het is niet zomaar een spelletje spelen; het draait om strategie, teamwerk en een constante drang om jezelf te verbeteren. Elk spel is als een complexe puzzel die ik probeer op te lossen, een uitdaging die me continu scherp houdt.              
+              Maar het gaat niet alleen om de competitie. E-sports hebben me een gemeenschap gegeven waar ik me thuis voel. Ik heb mensen ontmoet van over de hele wereld, allemaal verbonden door onze liefde voor het spel. Samen trainen, strategieën bespreken en elkaar aanmoedigen tijdens wedstrijden creëert een band die veel dieper gaat dan alleen maar virtuele avonturen.              
+              Het gevoel van voldoening als ik mijn team zie samenwerken en onze inspanningen zien resulteren in een overwinning is onbeschrijfelijk. Het gaat niet alleen om winnen, maar om het proces, de groei en de ervaringen die we delen.       
+              E-sports zijn voor mij veel meer dan alleen maar gamen. Het is een passie, een gemeenschap en een constante bron van opwinding en uitdaging die me blijft inspireren.</p>
+
+
+
+          </div>
+          <br><br><br><br><br><br><br>
+    </body>
+</html>
+

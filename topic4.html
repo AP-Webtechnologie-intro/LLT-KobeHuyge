@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+    <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+  <title>TEST PAGE</title>
+  <script>
+    const API_KEY = '5ecc7ef547411bff29a000af622caf43477e78488fb33b32c941c4404d56d8b1';
+    const BASE_URL = 'http://api.esportsearnings.com/v0/LookupHighestEarningPlayers';
+const OFFSET = 0; // Set your desired offset value
+
+// Construct the URL with query parameters
+const apiUrl = `${BASE_URL}?apikey=${API_KEY}&offset=${OFFSET}`;
+
+fetch(apiUrl)
+.then(response => {
+    if (!response.ok) {
+        throw new Error('Network response was not ok.');
+    }
+    return response.json();
+})
+.then(data => {
+    // Process the received data and display player names and earnings
+    const playersList = document.getElementById('playersList');
+    if (data && data.players) {
+        data.players.forEach(player => {
+            const listItem = document.createElement('li');
+            listItem.textContent = `${player.player_name} - Earnings: ${player.total_earnings}`;
+            playersList.appendChild(listItem);
+        });
+    } else {
+        console.log('No player data received.');
+    }
+})
+.catch(error => {
+    console.error('An error occurred:', error);
+});
+</script>
+  <style>
+    .top-right-image {
+  float: right;
+  top: 0;
+  right: 0;
+  width: 400px; 
+  height: auto; 
+  margin-left: 20px;
+  border-style: inset;
+  border-color: darkgray;
+  
+  
+}
+.container {
+  position: relative;
+  padding: 20px;
+  border: 1px solid #ccc;
+  margin-top: 50px;
+  outline-color: black;
+  outline-width: 5px;
+  outline-style: inset;
+  width: 70%;
+  align-self:center;
+
+    }
+    @media (max-width: 960px){
+      .top-right-image {
+  float: top;
+  top: 0;
+  right: 0;
+  width: 200px; 
+  height: auto; 
+  margin-left: 20px;
+  border-style: inset;
+  border-color: darkgray;
+
+    }}
+    @media (max-width: 600px){
+      .top-right-image {
+  float: top;
+  top: 0;
+  right: 0;
+  width: 100px; 
+  height: auto; 
+  margin-left: 20px;
+  border-style: inset;
+  border-color: darkgray;
+
+    }}
+    h1 {
+      font-size: 50px;
+    }
+  </style>
+  
+  
+
+    </head>
+    <body>
+      
+      
+        
+         <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">
+                <img src="OPDRACHT WEBBBB/NAVLOGO.png" width="100" height="50">
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link" style="color:aqua" aria-current="page" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" style="color:aqua" href="overzicht.html">Overzicht</a>
+                  </li>
+                
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" style="color:aqua" href="" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Topic-Pages
+                    </a>
+                    <ul class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" style="color:white" href="topic1.html">Pioniers</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" style="color:white" href="topic2.html">Professionele E-Sports</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" style="color:white" href="topic3.html">E-Sports in de 21e Eeuw</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" style="color:white" href="topic4.html">Olympische erkenning en mainstream succes E-Sports</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" style="color:white" href="topic5.html">De toekomst van E-Sports</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" style="color:white" href="topic6.html">E-Sports in Brazilië</a></li>                                         
+                    </ul>
+                    <li class="nav-item">
+                        <a class="nav-link" style="color:aqua" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" style="color:aqua" href="" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Mappen
+                      </a>
+                      <ul class="dropdown-menu bg-dark" aria-labellebdy="navbarDropdown">
+                        <li><a class="dropdown-item" style="color:white" href="Map1.html">Brazilië</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" style="color:white" href="Map2.html">Stanford University</a></li>
+                      <li><hr class="dropdown-divider"></li>
+
+                      </ul>
+
+                    </li>
+                    
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-lg" style="color:aqua" type="submit">Search</button>
+                  </form>                                
+              </div>
+            </div>
+          </nav>         
+          </div>
+          <div class="container">
+            <img class="top-right-image" src="OPDRACHT WEBBBB/ALT-Olympische-Spelen-.jpg">
+          <h1>Olympische Erkenning en Mainstream Succes (2010-heden)</h1>
+          <h2>Niet alleen fysieke sport?</h2>
+          <p>Olympische Erkenning en Mainstream Succes (2010-heden) markeren een opmerkelijke fase in de evolutie van e-sports, waarin de industrie wereldwijd erkenning en acceptatie heeft verworven, zelfs binnen traditionele sportkringen en de bredere maatschappij. Tijdens deze periode heeft e-sports enorme stappen gezet om als een serieuze en legitieme vorm van concurrentie en entertainment te worden beschouwd.
+            Een cruciale mijlpaal voor e-sports was de erkenning door het Internationaal Olympisch Comité (IOC) in 2017. Het IOC erkende e-sports als een vorm van sport, waardoor het genre van competitief gamen officieel werd geïntegreerd in de Olympische beweging. Deze erkenning bracht aanzienlijke geloofwaardigheid met zich mee en gaf de industrie een officiële stempel van goedkeuring van een van de meest gerespecteerde sportautoriteiten ter wereld.
+            De erkenning door het IOC betekende ook dat e-sports in aanmerking kwamen voor deelname aan regionale sportevenementen, zoals de Aziatische Spelen en de Zuidoost-Aziatische Spelen. Hierdoor konden e-sportsevenementen plaatsvinden naast traditionele sporten, wat een belangrijke mijlpaal was in de evolutie van de industrie. E-sportswedstrijden kregen de kans om medailles te winnen en atleten werden geïntegreerd in nationale delegaties.
+            Naast deze institutionele erkenning, heeft e-sports ook aanzienlijke vooruitgang geboekt in termen van mainstream succes. Televisiestations begonnen e-sportsevenementen uit te zenden, en streamingplatforms zoals Twitch en YouTube Gaming werden belangrijke kanalen voor het bekijken van e-sportstoernooien. Deze platforms bieden live uitzendingen van competities, evenals interactieve functies waarmee kijkers kunnen communiceren met spelers en commentatoren. E-sportsevenementen trokken enorme kijkersaantallen, met enkele finales die wereldwijd tientallen miljoenen kijkers trokken.
+            E-sportteams en spelers werden alom erkend en kregen sponsoraanbiedingen van grote bedrijven. Merken zoals Coca-Cola, Intel en Mercedes-Benz werden sponsors van e-sportsteams en -evenementen. Dit zorgde niet alleen voor financiële stabiliteit voor de industrie, maar legitimeerde ook e-sports als een commercieel aantrekkelijke onderneming.
+            Binnen de gaminggemeenschap groeide de e-sportscultuur snel. E-sportsevenementen werden sociale gebeurtenissen waar fans zich verzamelden om hun favoriete teams en spelers aan te moedigen. E-sportteams werden iconische merken, met trouwe supporters en gepassioneerde rivaliteiten.
+            De opkomst van e-sports heeft ook aanzienlijke economische gevolgen gehad. E-sportsbedrijven hebben miljoenen dollars geïnvesteerd in het bouwen van stadions en trainingsfaciliteiten, wat heeft bijgedragen aan de professionalisering en legitimiteit van de industrie.
+            <h2>The Sky Is The Limit</h2>Hoewel er nog steeds uitdagingen en debatten zijn, zoals dopingcontroles en uniforme regels, blijft de opwaartse trend van e-sports onmiskenbaar. Het wordt beschouwd als een van de snelst groeiende segmenten in de entertainmentwereld en heeft een blijvende impact gehad op hoe mensen naar gaming en concurrentie kijken. Het succes van e-sports in de 21e eeuw en de erkenning door organisaties zoals het IOC hebben de weg geëffend voor verdere groei en evolutie, en hebben e-sports stevig verankerd als een integraal onderdeel van de moderne culturele en sportieve landschap.
+            <br><h2>Lijst met de top 100 spelers</h2><ul id="playersList"></ul>
+          </p>
+            
+          </div>
+          
+          
+          
+    </body>
+</html>
